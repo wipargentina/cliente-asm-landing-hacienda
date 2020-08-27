@@ -22,7 +22,10 @@ function Form(props) {
             <label htmlFor="">Email</label>
             <input type="text" className="form-control" />
           </div>
-          <div className="btn btn-primary btn-lg btn-block">REGISTRATE</div>
+          {/* <div className="btn btn-primary btn-lg btn-block">REGISTRATE</div> */}
+          <a href="/gracias" className="btn btn-primary btn-lg btn-block">
+            REGISTRATE
+          </a>
         </div>
       </div>
     </form>

@@ -1,6 +1,10 @@
 import React from "react";
 import Form from "./Form";
 
+import HeroLogos from "./HeroLogos";
+import HeroInfo from "./HeroInfo";
+import HeroHeadline from "./HeroHeadline";
+
 function Hero(props) {
   return (
     <div className="hero">
@@ -9,13 +13,9 @@ function Hero(props) {
         <div className="container">
           <div className="row">
             <div className="col-md-8">
-              <div className="headline">
-                <h1>Remate Establecimiento Rústico</h1>
-                <h2>
-                  Registrate y participá en la Pre Oferta de nuestro próximo
-                  remate ganadero por Canal Rural
-                </h2>
-              </div>
+              <HeroHeadline />
+              <HeroInfo />
+              <HeroLogos />
             </div>
             <div className="col-md-4">
               <Form />

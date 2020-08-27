@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 function Header(props) {
   return (
-    <header className="header">
+    <header className="header sticky-top">
       <Navbar />
     </header>
   );

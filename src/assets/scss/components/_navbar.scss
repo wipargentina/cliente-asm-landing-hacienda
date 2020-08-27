@@ -1,10 +1,38 @@
 .navbar {
   color: #000;
-  padding: 20px;
+  padding: 24px;
   .navbar-brand {
-    margin: auto;
-    img {
-      height: 50px;
+    .logo {
+      height: 40px;
+    }
+  }
+  .phone {
+    display: flex;
+    align-items: center;
+    h6 {
+      margin-bottom: 0;
+      font-weight: 600;
+      color: $primary;
+    }
+    .headset {
+      height: 24px;
+      margin-right: 8px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    color: #000;
+    padding: 12px;
+    .navbar-brand {
+      margin: auto;
+      .logo {
+        height: 28px;
+      }
+    }
+    .phone {
+      display: none;
     }
   }
 }

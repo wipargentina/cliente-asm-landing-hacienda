@@ -17,13 +17,87 @@
     .container {
       .headline {
         color: white;
+        h2 {
+          margin-bottom: 30px;
+        }
+      }
+      .logos {
+        margin-bottom: 30px;
+        img {
+          max-height: 50px;
+        }
+      }
+      .info {
+        margin-bottom: 30px;
+        .card {
+          background-color: transparent;
+          .card-body {
+            padding: 0;
+            .card-title {
+              color: white;
+              margin-bottom: 4px;
+              font-size: 1.2em;
+            }
+            .card-date {
+              color: $primary;
+              font-size: 1.5em;
+              font-weight: 600;
+            }
+          }
+        }
       }
       .form {
         h5 {
           color: $primary;
         }
-        // position: sticky;
-        // top: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    .darken {
+      height: 1030px;
+    }
+    .content {
+      height: 1030px;
+      .container {
+        .headline {
+          margin-bottom: 30px;
+          h1 {
+            font-size: 2em;
+          }
+          h2 {
+            font-size: 1.4em;
+          }
+        }
+        .logos {
+          margin-bottom: 50px;
+          img {
+            max-height: 46px;
+          }
+        }
+        .info {
+          margin-bottom: 30px;
+          .card {
+            background-color: transparent;
+            .card-body {
+              padding: 0;
+              .card-title {
+                font-size: 1.1em;
+              }
+              .card-date {
+                font-size: 1.4em;
+              }
+            }
+          }
+        }
+        .form {
+          h5 {
+            color: $primary;
+          }
+        }
       }
     }
   }
