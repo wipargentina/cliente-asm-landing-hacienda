@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./routes/App";
 import * as serviceWorker from "./serviceWorker";
 
+import "../node_modules/bootstrap/dist/js/bootstrap";
 import TagManager from "react-gtm-module";
 
 const tagManagerArgs = {

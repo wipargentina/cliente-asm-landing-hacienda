@@ -1,0 +1,30 @@
+.hero {
+  position: relative;
+  background-image: url("http://www.saenz-valiente.com/images/lotes/24_IMG-20180713-WA0186.jpg");
+  background-size: cover;
+  background-position: center center;
+  .darken {
+    background-color: rgba(#000, 0.8);
+    height: 660px;
+  }
+  .content {
+    height: 660px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .container {
+      .headline {
+        color: white;
+      }
+      .form {
+        h5 {
+          color: $primary;
+        }
+        // position: sticky;
+        // top: 100px;
+      }
+    }
+  }
+}

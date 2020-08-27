@@ -1,3 +1,10 @@
 .navbar {
-  margin-bottom: 30px;
+  color: #000;
+  padding: 20px;
+  .navbar-brand {
+    margin: auto;
+    img {
+      height: 50px;
+    }
+  }
 }
