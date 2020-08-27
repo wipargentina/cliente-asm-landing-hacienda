@@ -5,7 +5,7 @@ import IconHeadset from "../assets/static/headset-solid.svg";
 
 function Navbar(props) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div className="container">
         <a className="navbar-brand" href="/">
           <img src={Logotipo} alt="logo" className="logo" />

@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Hero from "./Hero";
 
 function Header(props) {
   return (
-    <header className="header sticky-top">
-      <Navbar />
+    <header className="header">
+      <Hero />
     </header>
   );
 }
