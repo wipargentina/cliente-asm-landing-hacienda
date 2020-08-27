@@ -17,10 +17,13 @@ h2 {
   line-height: 1.4em;
 }
 h3 {
+  text-transform: uppercase;
+  //margin-bottom: 30px;
 }
 h4 {
 }
 h5 {
+  color: $primary;
 }
 h6 {
 }

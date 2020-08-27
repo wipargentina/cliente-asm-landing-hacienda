@@ -11,19 +11,22 @@ class Home extends Component {
     super(props);
     this.state = {
       enabledInformation: true,
+      enabledAbout: true,
+      enabledCta: false,
+      enabledCalendar: false,
+      enabledSuscription: true,
     };
   }
 
   render() {
-    const enabledInformation = this.state.enabledInformation;
     return (
       <>
         <Header />
-        {!enabledInformation ? null : <Information enabledInformation />}
-        <About />
-        <Cta />
-        <Calendar />
-        <Suscription />
+        {!this.state.enabledInformation ? null : <Information />}
+        {!this.state.enabledAbout ? null : <About />}
+        {!this.state.enabledCta ? null : <Cta />}
+        {!this.state.enabledCalendar ? null : <Calendar />}
+        {!this.state.enabledSuscription ? null : <Suscription />}
       </>
     );
   }

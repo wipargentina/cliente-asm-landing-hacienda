@@ -1,6 +1,6 @@
 import React from "react";
 
-function Gallery(props) {
+function PhotoItem(props) {
   const photos = props.photos;
   return (
     <div className="row justify-content-center">
@@ -8,7 +8,7 @@ function Gallery(props) {
         return (
           <div key={photo.id} className="col-md-3">
             <div className="photo">
-              <img src={photo.image} alt={photo.id} />
+              <img src={photo.image} alt="" />
             </div>
           </div>
         );
@@ -17,4 +17,4 @@ function Gallery(props) {
   );
 }
 
-export default Gallery;
+export default PhotoItem;

@@ -4,7 +4,7 @@ function HeroInfo(props) {
   return (
     <div className="info">
       <div className="row">
-        <div className="col-6 col-md-3">
+        <div className="col-6 col-md-4">
           <div className="card">
             <div className="card-body">
               <div className="card-title">Inicio Pre Oferta</div>
@@ -12,7 +12,7 @@ function HeroInfo(props) {
             </div>
           </div>
         </div>
-        <div className="col-6 col-md-3">
+        <div className="col-6 col-md-4">
           <div className="card">
             <div className="card-body">
               <div className="card-title">Inicio Remate</div>

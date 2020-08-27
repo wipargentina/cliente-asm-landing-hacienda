@@ -8,7 +8,7 @@ import HeroHeadline from "./HeroHeadline";
 function Hero(props) {
   return (
     <div className="hero">
-      <div className="darken">darken</div>
+      <div className="darken"></div>
       <div className="content">
         <div className="container">
           <div className="row">
