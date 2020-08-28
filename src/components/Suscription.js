@@ -7,10 +7,10 @@ class Suscription extends Component {
     return (
       <div className="suscription">
         <div className="container">
-          <h3>Suscripción</h3>
+          <h3>Suscribite a nuestro Newsletter</h3>
           <h5 className="mb-4">
-            Suscribite a nuestro newsletter para recibir novedades de los
-            próximos remates
+            Ingresá tu correo y recibí todas las novedades de los próximos
+            remates.
           </h5>
           <div className="row justify-content-center">
             <div className="col-md-5">
@@ -28,11 +28,11 @@ class Suscription extends Component {
                 messages={{
                   sending: "Enviando...",
                   success: "Gracias por suscribirte!",
-                  error: "An unexpected internal error has occurred.",
+                  error: "Ha ocurrido un error interno inesperado.",
                   empty: "Tiene que ingresar tu email.",
                   duplicate:
-                    "Demasiados intentos de suscripción para esta dirección de correo electrónico",
-                  button: "Subscribirme!",
+                    "Su correo ya se encuentra en nuestra base de datos",
+                  button: "Enviar!",
                 }}
                 className="mailchimp"
               />
