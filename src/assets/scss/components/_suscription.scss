@@ -1,4 +1,27 @@
 .suscription {
   padding: 50px 0;
   text-align: center;
+  .mailchimp {
+    input,
+    button {
+      // border-color: red;
+      border: 1px solid $gray-400;
+      border-radius: 0px;
+    }
+    input {
+      width: 100%;
+      padding: 4px 8px;
+      margin-bottom: 16px;
+      text-align: center;
+      // border-radius: 0px;
+    }
+    button {
+      padding: 4px 16px;
+      margin-bottom: 8px;
+    }
+
+    .msg-alert {
+      margin-top: 8px;
+    }
+  }
 }

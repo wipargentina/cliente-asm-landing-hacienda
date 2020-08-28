@@ -2,34 +2,26 @@
   "data": [
     {
       "id": 1,
-      "image": "https://res.cloudinary.com/germansayago/image/upload/v1598569631/alfredosmondino/about/photo-5_kwdiok.jpg"
-    },
-    {
-      "id": 2,
       "image": "https://res.cloudinary.com/germansayago/image/upload/v1598569631/alfredosmondino/about/photo-7_prqpz4.jpg"
     },
     {
-      "id": 3,
+      "id": 2,
       "image": "https://res.cloudinary.com/germansayago/image/upload/v1598569631/alfredosmondino/about/photo-8_yc39hz.jpg"
     },
     {
-      "id": 4,
+      "id": 3,
       "image": "https://res.cloudinary.com/germansayago/image/upload/v1598569630/alfredosmondino/about/photo-1_vip6pg.jpg"
     },
     {
-      "id": 5,
+      "id": 4,
       "image": "https://res.cloudinary.com/germansayago/image/upload/v1598569630/alfredosmondino/about/photo-6_uuls9k.jpg"
     },
     {
-      "id": 6,
+      "id": 5,
       "image": "https://res.cloudinary.com/germansayago/image/upload/v1598569629/alfredosmondino/about/photo-4_afn7jt.jpg"
     },
     {
-      "id": 7,
-      "image": "https://res.cloudinary.com/germansayago/image/upload/v1598569629/alfredosmondino/about/photo-2_qzjeik.jpg"
-    },
-    {
-      "id": 7,
+      "id": 6,
       "image": "https://res.cloudinary.com/germansayago/image/upload/v1598569629/alfredosmondino/about/photo-3_nri7jd.jpg"
     }
   ]

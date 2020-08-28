@@ -10,7 +10,7 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      enabledInformation: true,
+      enabledInformation: false,
       enabledAbout: true,
       enabledCta: false,
       enabledCalendar: false,
