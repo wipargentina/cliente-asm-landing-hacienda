@@ -17,10 +17,24 @@
     .container {
       .headline {
         color: white;
-        h1 {
-          margin-top: 10px;
+        .pretitle {
+          text-transform: uppercase;
+          font-size: 1.6em;
+          font-weight: 600;
+          margin-bottom: 8px;
         }
-        h2 {
+        .title {
+          margin-bottom: 20px;
+          img {
+            width: 300px;
+            margin-bottom: 12px;
+          }
+          h2 {
+            font-weight: 600;
+          }
+        }
+        .subtitle {
+          text-transform: inherit;
           margin-bottom: 30px;
         }
       }
@@ -47,6 +61,13 @@
               font-size: 2em;
               font-weight: 600;
               letter-spacing: 0.04em;
+              line-height: 1.4em;
+            }
+            .card-logo {
+              margin-top: 8px;
+              .logo-canal-rural {
+                height: 60px;
+              }
             }
           }
         }
@@ -58,20 +79,35 @@
 @media (max-width: 767px) {
   .hero {
     .darken {
-      height: 1030px;
+      height: 1130px;
       background-color: rgba(#000, 0.8);
     }
     .content {
-      height: 1030px;
+      height: 1130px;
       .container {
         text-align: center;
         .headline {
           margin-bottom: 30px;
-          h1 {
-            margin-top: 0;
-            font-size: 2em;
+          .pretitle {
+            text-transform: uppercase;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-bottom: 8px;
           }
-          h2 {
+          .title {
+            margin-bottom: 20px;
+            img {
+              width: 240px;
+              margin-bottom: 12px;
+            }
+            h2 {
+              font-size: 1.6em;
+              font-weight: 600;
+            }
+          }
+          .subtitle {
+            text-transform: inherit;
+            margin-bottom: 20px;
             font-size: 1.4em;
           }
         }
@@ -85,6 +121,7 @@
           margin-bottom: 30px;
           .card {
             background-color: transparent;
+            margin-bottom: 16px;
             .card-body {
               padding: 0;
               .card-title {

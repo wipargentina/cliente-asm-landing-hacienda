@@ -12,7 +12,7 @@ function Navbar(props) {
         </a>
         <div className="phone ml-auto">
           <img src={IconHeadset} alt="headst" className="headset" />
-          <h6>+54 3583 647 178</h6>
+          <h6>+54 351 650 9975</h6>
         </div>
       </div>
     </nav>

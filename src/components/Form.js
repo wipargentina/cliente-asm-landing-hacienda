@@ -60,6 +60,7 @@ class Form extends Component {
                   name="fname"
                   className="form-control"
                   onChange={this.handleChange}
+                  required
                 />
               </div>
               <div className="form-group">
@@ -69,6 +70,7 @@ class Form extends Component {
                   name="lname"
                   className="form-control"
                   onChange={this.handleChange}
+                  required
                 />
               </div>
               <div className="form-group">
@@ -78,6 +80,7 @@ class Form extends Component {
                   name="phone"
                   className="form-control"
                   onChange={this.handleChange}
+                  required
                 />
               </div>
               <div className="form-group mb-4">
@@ -87,6 +90,7 @@ class Form extends Component {
                   name="email"
                   className="form-control"
                   onChange={this.handleChange}
+                  required
                 />
               </div>
               {/* <div className="btn btn-primary btn-lg btn-block">REGISTRATE</div> */}

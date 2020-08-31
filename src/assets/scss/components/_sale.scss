@@ -1,0 +1,134 @@
+.sale {
+  padding: 80px 0;
+  border-top: 4px solid $warning;
+  border-bottom: 4px solid $warning;
+  background-color: $gray-900;
+  color: white;
+  text-align: center;
+
+  .sale-one {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 2px dotted $gray-800;
+    .title {
+      font-size: 5.6em;
+      line-height: 1.3em;
+      font-weight: 900;
+      margin-bottom: 0;
+      //color: $primary;
+    }
+    .subtitle {
+      text-transform: uppercase;
+      font-size: 1.2em;
+      letter-spacing: -0.04em;
+    }
+  }
+  .sale-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    li {
+      display: flex;
+      align-items: center;
+      border-bottom: 2px dotted $gray-800;
+      padding: 10px 0;
+      .title {
+        //color: $primary;
+        font-size: 2.6em;
+        font-weight: 700;
+        margin-right: 8px;
+      }
+      .subtitle {
+        font-size: 1.2em;
+        line-height: 1.2em;
+        //font-weight: 600;
+        //letter-spacing: -0.02em;
+        text-transform: uppercase;
+        small {
+          display: block;
+          text-transform: lowercase;
+        }
+      }
+    }
+  }
+  .conditions {
+    margin-top: 30px;
+    padding-top: 30px;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: $gray-400;
+    border-top: 1px solid $gray-800;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      // background-color: white;
+      // color: black;
+      background-color: $gray-800;
+      padding: 8px 16px;
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .sale {
+    padding: 40px 0;
+
+    .sale-one {
+      margin-bottom: 8px;
+    }
+    .sale-list {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      li {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px dotted $gray-800;
+        padding: 10px 0;
+        .title {
+          //color: $primary;
+          font-size: 2.6em;
+          font-weight: 700;
+          margin-right: 8px;
+        }
+        .subtitle {
+          font-size: 1.2em;
+          line-height: 1.2em;
+          //font-weight: 600;
+          //letter-spacing: -0.02em;
+          text-transform: uppercase;
+          small {
+            display: block;
+            text-transform: lowercase;
+          }
+        }
+      }
+    }
+    .conditions {
+      margin-top: 20px;
+      padding-top: 0px;
+      text-transform: uppercase;
+      font-size: 1em;
+      color: $gray-400;
+      border-top: 0;
+
+      display: flex;
+      flex-direction: column;
+
+      div {
+        padding: 8px 16px;
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

@@ -1,13 +1,18 @@
 import React from "react";
+import logoRusticos from "../assets/static/logo-rusticos.png";
 
 function HeroHeadline(props) {
   return (
     <div className="headline">
-      <h1>Remate Televisado Establecimiento Rústicos</h1>
-      <h2>
+      <div className="pretitle">8° Venta Anual</div>
+      <div className="title">
+        <img src={logoRusticos} alt="rusticos" className="img-fluid" />
+        <h2>MÁXIMA SELECCIÓN GENÉTICA</h2>
+      </div>
+      <h3 className="subtitle">
         Registrate y participá en la <b>Pre Oferta</b> de nuestro próximo remate
         ganadero por Canal Rural
-      </h2>
+      </h3>
     </div>
   );
 }
