@@ -7,7 +7,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap";
 import TagManager from "react-gtm-module";
 
 const tagManagerArgs = {
-  gtmId: "GTM_YOUR_ID",
+  gtmId: "GTM-T97MQN7",
 };
 
 TagManager.initialize(tagManagerArgs);
