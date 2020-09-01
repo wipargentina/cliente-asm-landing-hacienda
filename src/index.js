@@ -4,13 +4,13 @@ import App from "./routes/App";
 import * as serviceWorker from "./serviceWorker";
 
 import "../node_modules/bootstrap/dist/js/bootstrap";
-// import TagManager from "react-gtm-module";
+import TagManager from "react-gtm-module";
 
-// const tagManagerArgs = {
-//   gtmId: "GTM-T97MQN7",
-// };
+const tagManagerArgs = {
+  gtmId: "GTM-T97MQN7",
+};
 
-// TagManager.initialize(tagManagerArgs);
+TagManager.initialize(tagManagerArgs);
 
 ReactDOM.render(
   <React.StrictMode>
