@@ -62,7 +62,7 @@ function Sale() {
           <div className="change">canje por cereal</div>
         </div>
         <div className="mt-5">
-          <h4 className="mb-3">¿Querés hacer tu Pre Oferta?</h4>
+          <h4 className="mb-4">¿Querés participar del próximo remate?</h4>
           <Scroll
             to="form"
             spy={true}

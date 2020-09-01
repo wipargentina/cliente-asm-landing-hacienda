@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import axios from "axios";
 
 // var config = {
+//   method: "POST",
 //   headers: {
 //     "Access-Control-Allow-Origin": "*",
 //     "Content-Type": "application/json",
+//     Authorization: localStorage.token,
 //   },
 //   crossdomain: true,
 // };
@@ -17,8 +19,10 @@ class Form extends Component {
       lname: "",
       email: "",
       phone: "",
+      tags: "Rusticos",
       isSending: false,
       isSended: false,
+      isError: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -37,8 +41,13 @@ class Form extends Component {
       isSending: true,
     });
 
+    //console.log(this.state);
+
     axios
-      .post("https://wipargentina.com/clientes/mondino/api", this.state)
+      .post(
+        "https://alfredosmondino.wipargentina.com/backend/mail.php",
+        this.state
+      )
       .then((response) => {
         console.log(response);
         if (response.status === 200) {
@@ -57,6 +66,9 @@ class Form extends Component {
       })
       .catch((error) => {
         console.log(error);
+        this.setState({
+          isError: true,
+        });
       });
   }
 
@@ -108,6 +120,12 @@ class Form extends Component {
                   required
                 />
               </div>
+              <input
+                type="hidden"
+                name="tags"
+                value={this.state.tags}
+                onChange={this.handleChange}
+              />
               <button
                 className="btn btn-primary btn-lg btn-block"
                 type="submit"

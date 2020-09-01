@@ -3,6 +3,7 @@ import React from "react";
 import faFacebook from "../assets/static/facebook-f-brands.svg";
 import faInstagram from "../assets/static/instagram-brands.svg";
 import faTwitter from "../assets/static/twitter-brands.svg";
+import faWhatsapp from "../assets/static/whatsapp-brands.svg";
 
 function Tanks(props) {
   return (
@@ -14,6 +15,12 @@ function Tanks(props) {
             <p className="lead mb-5">
               Uno de nuestros comerciales se pondrán en contacto contigo
             </p>
+            <h4 className="mt-3 mb-3">Escribinos por Whatsapp</h4>
+            <div className="whatsapp">
+              <a href="https://wa.me/543516509975" className="btn btn-success">
+                <img src={faWhatsapp} alt="" /> +54 351 650 9975
+              </a>
+            </div>
             <h4 className="mb-2">Te invitamos a visites nuestra web</h4>
             <a
               href="https://alfredosmondino.com/"

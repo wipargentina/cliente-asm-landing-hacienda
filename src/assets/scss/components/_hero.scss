@@ -1,10 +1,10 @@
 .hero {
   position: relative;
-  background-image: url("http://www.saenz-valiente.com/images/lotes/24_IMG-20180713-WA0186.jpg");
+  background-image: url("../../static/bg-hero.jpg");
   background-size: cover;
   background-position: center bottom;
   .darken {
-    background-color: rgba(#000, 0.7);
+    background-color: rgba(#000, 0.6);
     height: 660px;
   }
   .content {
@@ -26,7 +26,7 @@
         .title {
           margin-bottom: 20px;
           img {
-            width: 300px;
+            width: 340px;
             margin-bottom: 12px;
           }
           h2 {

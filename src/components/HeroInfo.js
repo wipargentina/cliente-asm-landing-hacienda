@@ -10,7 +10,7 @@ function HeroInfo(props) {
             <div className="card-body">
               <div className="card-title">Inicio del Remate</div>
               <div className="card-date">
-                Lunes 7 de Septiembre. <br /> 15 horas
+                Lunes 7 de Septiembre. <br /> 13.30 horas
               </div>
             </div>
           </div>

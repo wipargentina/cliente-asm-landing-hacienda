@@ -10,8 +10,7 @@ function HeroHeadline(props) {
         <h2>MÁXIMA SELECCIÓN GENÉTICA</h2>
       </div>
       <h3 className="subtitle">
-        Registrate y participá en la <b>Pre Oferta</b> de nuestro próximo remate
-        televisado
+        Registrate y participá de nuestro próximo remate televisado
       </h3>
     </div>
   );
