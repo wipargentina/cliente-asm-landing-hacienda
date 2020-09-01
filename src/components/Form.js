@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+// var config = {
+//   headers: {
+//     "Access-Control-Allow-Origin": "*",
+//     "Content-Type": "application/json",
+//   },
+//   crossdomain: true,
+// };
+
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -29,20 +37,27 @@ class Form extends Component {
       isSending: true,
     });
 
-    axios.post("http://sieteuno.com.ar/api-landing/api").then((response) => {
-      console.log(response);
-      if (response.status === 200) {
-        this.setState({
-          fname: "",
-          lname: "",
-          email: "",
-          phone: "",
-          isSending: false,
-          isSended: true,
-        });
-        window.location.assign(process.env.PUBLIC_URL + "/gracias");
-      }
-    });
+    axios
+      .post("https://wipargentina.com/clientes/mondino/api", this.state)
+      .then((response) => {
+        console.log(response);
+        if (response.status === 200) {
+          this.setState({
+            fname: "",
+            lname: "",
+            email: "",
+            phone: "",
+            isSending: false,
+            isSended: true,
+          });
+          window.location.assign(process.env.PUBLIC_URL + "/gracias");
+        }
+        if (response.status === 400) {
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   render() {
@@ -93,10 +108,6 @@ class Form extends Component {
                   required
                 />
               </div>
-              {/* <div className="btn btn-primary btn-lg btn-block">REGISTRATE</div> */}
-              {/* <a href="/gracias" className="btn btn-primary btn-lg btn-block">
-                REGISTRATE
-              </a> */}
               <button
                 className="btn btn-primary btn-lg btn-block"
                 type="submit"

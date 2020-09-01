@@ -57,7 +57,7 @@ function Sale() {
           </div>
         </div>
         <div className="conditions">
-          <div class="pay">importante plazo de pago</div>
+          <div className="pay">importante plazo de pago</div>
           <div className="cards">tarjetas rurales</div>
           <div className="change">canje por cereal</div>
         </div>
