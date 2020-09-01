@@ -11,7 +11,7 @@ function HeroHeadline(props) {
       </div>
       <h3 className="subtitle">
         Registrate y participá en la <b>Pre Oferta</b> de nuestro próximo remate
-        ganadero por Canal Rural
+        televisado
       </h3>
     </div>
   );

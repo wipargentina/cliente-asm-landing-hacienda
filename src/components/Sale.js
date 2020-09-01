@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as Scroll } from "react-scroll";
 
 function Sale() {
   return (
@@ -55,11 +56,23 @@ function Sale() {
             </div>
           </div>
         </div>
-        <hr />
         <div className="conditions">
           <div class="pay">importante plazo de pago</div>
           <div className="cards">tarjetas rurales</div>
           <div className="change">canje por cereal</div>
+        </div>
+        <div className="mt-5">
+          <h4 className="mb-3">¿Querés hacer tu Pre Oferta?</h4>
+          <Scroll
+            to="form"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={599}
+            className="btn btn-lg btn-primary text-white"
+          >
+            ¡REGISTRATE!
+          </Scroll>
         </div>
       </div>
     </div>

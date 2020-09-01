@@ -16,7 +16,7 @@ class Home extends Component {
       enabledAbout: true,
       enabledCta: false,
       enabledCalendar: false,
-      enabledSuscription: true,
+      enabledSuscription: false,
     };
   }
 
