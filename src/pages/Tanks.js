@@ -15,7 +15,11 @@ function Tanks(props) {
               Uno de nuestros comerciales se pondrán en contacto contigo
             </p>
             <h4 className="mb-2">Te invitamos a visites nuestra web</h4>
-            <a href="https://alfredosmondino.com/" rel="noopener noreferrer">
+            <a
+              href="https://alfredosmondino.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               https://alfredosmondino.com/
             </a>
             <h4 className="mt-3">o que nos sigas en nuestras redes</h4>
