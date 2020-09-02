@@ -59,7 +59,7 @@ function Tanks(props) {
                 </div>
               </div>
             </div>
-            <h4 className="mb-2">Te invitamos a visites nuestra web</h4>
+            <h4 className="mb-2">Te invitamos a que visites nuestra web</h4>
             <a
               id="link-web"
               href="https://alfredosmondino.com/"
