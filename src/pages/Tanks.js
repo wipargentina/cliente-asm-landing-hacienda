@@ -22,8 +22,11 @@ function Tanks(props) {
                   <h5>Hacienda Gorda</h5>
                   <h6>Francisco Garin</h6>
                   <a
+                    id="btn-hacienda"
                     href="https://wa.me/543516509975"
                     className="btn btn-success"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     <img src={faWhatsapp} alt="" /> +54 351 650 9975
                   </a>
@@ -32,8 +35,11 @@ function Tanks(props) {
                   <h5>Invernada y Cría</h5>
                   <h6>Mario Masanti</h6>
                   <a
+                    id="btn-invernada"
                     href="https://wa.me/3583647964"
                     className="btn btn-success"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     <img src={faWhatsapp} alt="" /> +54 358 3647 964
                   </a>
@@ -42,8 +48,11 @@ function Tanks(props) {
                   <h5>Reproductores</h5>
                   <h6>Leonardo Pérez</h6>
                   <a
+                    id="btn-reproductores"
                     href="https://wa.me/543583640202"
                     className="btn btn-success"
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     <img src={faWhatsapp} alt="" /> +54 358 3640 202
                   </a>
@@ -52,6 +61,7 @@ function Tanks(props) {
             </div>
             <h4 className="mb-2">Te invitamos a visites nuestra web</h4>
             <a
+              id="link-web"
               href="https://alfredosmondino.com/"
               rel="noopener noreferrer"
               target="_blank"
@@ -61,6 +71,7 @@ function Tanks(props) {
             <h4 className="mt-3">o que nos sigas en nuestras redes</h4>
             <div className="social">
               <a
+                id="btn-facebook"
                 href="https://es-la.facebook.com/alfredosmondino/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -69,6 +80,7 @@ function Tanks(props) {
                 <img src={faFacebook} alt="facebook" />
               </a>
               <a
+                id="btn-instagram"
                 href="https://twitter.com/alfredosmondino"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -77,6 +89,7 @@ function Tanks(props) {
                 <img src={faInstagram} alt="instagram" />
               </a>
               <a
+                id="btn-twitter"
                 href="https://twitter.com/alfredosmondino"
                 rel="noopener noreferrer"
                 target="_blank"
