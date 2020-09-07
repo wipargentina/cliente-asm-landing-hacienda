@@ -1,16 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-// var config = {
-//   method: "POST",
-//   headers: {
-//     "Access-Control-Allow-Origin": "*",
-//     "Content-Type": "application/json",
-//     Authorization: localStorage.token,
-//   },
-//   crossdomain: true,
-// };
-
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +9,7 @@ class Form extends Component {
       lname: "",
       email: "",
       phone: "",
-      tags: "Rusticos",
+      tags: "Remate",
       isSending: false,
       isSended: false,
       isError: false,

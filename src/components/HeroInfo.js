@@ -5,12 +5,12 @@ function HeroInfo(props) {
   return (
     <div className="info">
       <div className="row">
-        <div className="col-md-7">
+        <div className="col-md-8">
           <div className="card">
             <div className="card-body">
               <div className="card-title">Inicio del Remate</div>
               <div className="card-date">
-                Lunes 7 de Septiembre. <br /> 13.30 horas
+                Miércoles 16 de Septiembre. <br /> 13.30 horas
               </div>
             </div>
           </div>

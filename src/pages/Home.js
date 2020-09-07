@@ -12,7 +12,7 @@ class Home extends Component {
     super(props);
     this.state = {
       enabledInformation: false,
-      enabledSale: true,
+      enabledSale: false,
       enabledAbout: true,
       enabledCta: false,
       enabledCalendar: false,

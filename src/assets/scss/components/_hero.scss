@@ -17,6 +17,7 @@
     .container {
       .headline {
         color: white;
+        margin-top: 50px;
         .pretitle {
           text-transform: uppercase;
           font-size: 1.6em;
@@ -31,11 +32,13 @@
           }
           h2 {
             font-weight: 600;
+            font-size: 2.6em;
           }
         }
         .subtitle {
           text-transform: inherit;
           margin-bottom: 30px;
+          font-size: 2em;
         }
       }
       .logos {
@@ -87,6 +90,7 @@
       .container {
         text-align: center;
         .headline {
+          margin-top: 0;
           margin-bottom: 30px;
           .pretitle {
             text-transform: uppercase;
