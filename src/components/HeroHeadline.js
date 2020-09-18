@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function HeroHeadline(props) {
   return (
@@ -8,10 +8,11 @@ function HeroHeadline(props) {
         <h2>PRÓXIMO REMATE TELEVISADO</h2>
       </div>
       <h3 className="subtitle">
-        Registrate y participá de nuestro próximo remate televisado
+        Registrate y participá de nuestro próximo remate televisado de{' '}
+        <b>Cabaña Don Benjamín</b>
       </h3>
     </div>
-  );
+  )
 }
 
-export default HeroHeadline;
+export default HeroHeadline
