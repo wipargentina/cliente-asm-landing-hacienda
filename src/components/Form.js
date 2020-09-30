@@ -130,7 +130,7 @@ class Form extends Component {
                 />
               </div>
               <div>
-                <label className='mb-1'>¿Cual es tu tema de interés?</label>
+                <label className='mb-1'>¿Cuál es tu tema de interés?</label>
                 <div className='tags'>
                   <div className='custom-control custom-radio custom-control-inline'>
                     <input
