@@ -1,0 +1,35 @@
+{
+  "month": "2020-10-01",
+  "events": [
+    {
+      "id": 1,
+      "date": "2020-10-02",
+      "title": "V. Huidobro - Cba.",
+      "tv": false
+    },
+    {
+      "id": 2,
+      "date": "2020-10-08",
+      "title": "Compañia General de Hacienda SA",
+      "tv": true
+    },
+    {
+      "id": 3,
+      "date": "2020-10-13",
+      "title": "Los Murmullos de Garruchos SA",
+      "tv": true
+    },
+    {
+      "id": 4,
+      "date": "2020-10-26",
+      "title": "Telvisado",
+      "tv": true
+    },
+    {
+      "id": 5,
+      "date": "2020-10-30",
+      "title": "Cabaña La Paz de Werthein",
+      "tv": true
+    }
+  ]
+}

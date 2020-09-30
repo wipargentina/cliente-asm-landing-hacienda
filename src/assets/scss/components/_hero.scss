@@ -1,14 +1,14 @@
 .hero {
   position: relative;
-  background-image: url("../../static/bg-hero.jpg");
+  background-image: url('../../static/bg-hero.jpg');
   background-size: cover;
   background-position: center bottom;
   .darken {
     background-color: rgba(#000, 0.6);
-    height: 660px;
+    height: 740px;
   }
   .content {
-    height: 660px;
+    height: 740px;
     position: absolute;
     top: 0;
     width: 100%;
@@ -32,7 +32,9 @@
           }
           h2 {
             font-weight: 600;
-            font-size: 2.6em;
+            font-size: 2.4rem;
+            line-height: 2.4rem;
+            margin-bottom: 0;
           }
         }
         .subtitle {
@@ -86,11 +88,11 @@
 @media (max-width: 767px) {
   .hero {
     .darken {
-      height: 1130px;
+      height: 1200px;
       background-color: rgba(#000, 0.8);
     }
     .content {
-      height: 1130px;
+      height: 1200px;
       .container {
         text-align: center;
         .headline {

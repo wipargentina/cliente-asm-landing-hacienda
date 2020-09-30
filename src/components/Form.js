@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import axios from "axios";
+import React, { Component } from 'react';
+import axios from 'axios';
 
 class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      fname: "",
-      lname: "",
-      email: "",
-      phone: "",
-      tags: "Remate",
+      fname: '',
+      lname: '',
+      email: '',
+      phone: '',
+      tags: 'Remate',
       isSending: false,
       isSended: false,
-      isError: false,
+      isError: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -21,35 +21,35 @@ class Form extends Component {
 
   handleChange(e) {
     this.setState({
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.setState({
-      isSending: true,
+      isSending: true
     });
 
     //console.log(this.state);
 
     axios
       .post(
-        "https://alfredosmondino.wipargentina.com/backend/mail.php",
+        'https://alfredosmondino.wipargentina.com/backend/mail.php',
         this.state
       )
       .then((response) => {
         console.log(response);
         if (response.status === 200) {
           this.setState({
-            fname: "",
-            lname: "",
-            email: "",
-            phone: "",
+            fname: '',
+            lname: '',
+            email: '',
+            phone: '',
             isSending: false,
-            isSended: true,
+            isSended: true
           });
-          window.location.assign(process.env.PUBLIC_URL + "/gracias");
+          window.location.assign(process.env.PUBLIC_URL + '/gracias');
         }
         if (response.status === 400) {
         }
@@ -57,7 +57,7 @@ class Form extends Component {
       .catch((error) => {
         console.log(error);
         this.setState({
-          isError: true,
+          isError: true
         });
       });
   }
@@ -65,63 +65,63 @@ class Form extends Component {
   render() {
     const isSending = this.state.isSending;
     return (
-      <div className="form">
+      <div className='form'>
         <form onSubmit={this.handleSubmit}>
-          <div className="card">
-            <div className="card-body">
+          <div className='card'>
+            <div className='card-body'>
               <h5>Completa tus datos aquí</h5>
-              <div className="form-group">
-                <label htmlFor="">Nombre</label>
+              <div className='form-group'>
+                <label htmlFor=''>Nombre</label>
                 <input
-                  type="text"
-                  name="fname"
-                  className="form-control"
+                  type='text'
+                  name='fname'
+                  className='form-control'
                   onChange={this.handleChange}
                   required
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="">Apellido</label>
+              <div className='form-group'>
+                <label htmlFor=''>Apellido</label>
                 <input
-                  type="text"
-                  name="lname"
-                  className="form-control"
+                  type='text'
+                  name='lname'
+                  className='form-control'
                   onChange={this.handleChange}
                   required
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="">Teléfono</label>
+              <div className='form-group'>
+                <label htmlFor=''>Teléfono</label>
                 <input
-                  type="text"
-                  name="phone"
-                  className="form-control"
+                  type='text'
+                  name='phone'
+                  className='form-control'
                   onChange={this.handleChange}
                   required
                 />
               </div>
-              <div className="form-group mb-4">
-                <label htmlFor="">Email</label>
+              <div className='form-group mb-4'>
+                <label htmlFor=''>Email</label>
                 <input
-                  type="text"
-                  name="email"
-                  className="form-control"
+                  type='text'
+                  name='email'
+                  className='form-control'
                   onChange={this.handleChange}
                   required
                 />
               </div>
               <input
-                type="hidden"
-                name="tags"
+                type='hidden'
+                name='tags'
                 value={this.state.tags}
                 onChange={this.handleChange}
               />
               <button
-                className="btn btn-primary btn-lg btn-block"
-                type="submit"
+                className='btn btn-primary btn-lg btn-block'
+                type='submit'
                 disabled={isSending}
               >
-                {isSending ? "ENVIANDO ..." : "¡REGISTRARME!"}
+                {isSending ? 'ENVIANDO ...' : '¡REGISTRARME!'}
               </button>
             </div>
           </div>

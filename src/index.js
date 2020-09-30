@@ -1,13 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./routes/App";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './routes/App';
+import * as serviceWorker from './serviceWorker';
 
-import "../node_modules/bootstrap/dist/js/bootstrap";
-import TagManager from "react-gtm-module";
+import '../node_modules/bootstrap/dist/js/bootstrap';
+import moment from 'moment';
+import locale from 'moment/locale/es';
+import TagManager from 'react-gtm-module';
+
+moment.updateLocale('es', locale);
 
 const tagManagerArgs = {
-  gtmId: "GTM-T97MQN7",
+  gtmId: 'GTM-T97MQN7'
 };
 
 TagManager.initialize(tagManagerArgs);
@@ -16,7 +20,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
