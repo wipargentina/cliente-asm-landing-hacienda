@@ -9,19 +9,27 @@ class Form extends Component {
       lname: '',
       email: '',
       phone: '',
-      tags: 'Remate',
+      location: '',
+      tags: 'remates',
       isSending: false,
       isSended: false,
       isError: false
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleOptionChange = this.handleOptionChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value
+    });
+  }
+
+  handleOptionChange(e) {
+    this.setState({
+      tags: e.target.value
     });
   }
 
@@ -46,7 +54,8 @@ class Form extends Component {
             lname: '',
             email: '',
             phone: '',
-            isSending: false,
+            location: '',
+            //isSending: false,
             isSended: true
           });
           window.location.assign(process.env.PUBLIC_URL + '/gracias');
@@ -93,29 +102,66 @@ class Form extends Component {
               <div className='form-group'>
                 <label htmlFor=''>Teléfono</label>
                 <input
-                  type='text'
+                  type='tel'
                   name='phone'
                   className='form-control'
                   onChange={this.handleChange}
                   required
                 />
               </div>
-              <div className='form-group mb-4'>
+              <div className='form-group'>
                 <label htmlFor=''>Email</label>
                 <input
-                  type='text'
+                  type='email'
                   name='email'
                   className='form-control'
                   onChange={this.handleChange}
                   required
                 />
               </div>
-              <input
-                type='hidden'
-                name='tags'
-                value={this.state.tags}
-                onChange={this.handleChange}
-              />
+              <div className='form-group mb-2'>
+                <label htmlFor=''>Localidad</label>
+                <input
+                  type='text'
+                  name='location'
+                  className='form-control'
+                  onChange={this.handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label className='mb-1'>¿Cual es tu tema de interés?</label>
+                <div className='tags'>
+                  <div className='custom-control custom-radio custom-control-inline'>
+                    <input
+                      className='custom-control-input'
+                      type='radio'
+                      name='tags'
+                      id='tags-1'
+                      value='remates'
+                      onChange={this.handleOptionChange}
+                      checked={this.state.tags === 'remates'}
+                    />
+                    <label className='custom-control-label' htmlFor='tags-1'>
+                      Próximo Remate
+                    </label>
+                  </div>
+                  <div className='custom-control custom-radio custom-control-inline'>
+                    <input
+                      className='custom-control-input'
+                      type='radio'
+                      name='tags'
+                      id='tags-2'
+                      onChange={this.handleOptionChange}
+                      value='operaciones'
+                      checked={this.state.tags === 'operaciones'}
+                    />
+                    <label className='custom-control-label' htmlFor='tags-2'>
+                      Operar con Nosotros
+                    </label>
+                  </div>
+                </div>
+              </div>
               <button
                 className='btn btn-primary btn-lg btn-block'
                 type='submit'
