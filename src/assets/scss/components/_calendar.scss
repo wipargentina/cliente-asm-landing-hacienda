@@ -1,5 +1,5 @@
 .calendar {
-  padding: 20px 20px;
+  padding: 20px 20px 1px 20px;
   // border: 1px solid white;
   background-color: rgba(#000, 0.5);
   border-top: 4px solid $primary;
@@ -14,7 +14,6 @@
   ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 30px;
     .list-head,
     .list-body {
       color: white;
@@ -28,7 +27,7 @@
       font-weight: 600;
       font-size: 1.1rem;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      // margin-bottom: 8px;
     }
     .list-body {
       border-bottom: 1px solid rgba($primary, 0.6);
