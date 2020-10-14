@@ -19,7 +19,7 @@
     .list-body {
       color: white;
       display: grid;
-      grid-template-columns: auto 150px;
+      grid-template-columns: auto 170px;
       text-align: left;
     }
     .list-head {
@@ -82,7 +82,7 @@
       margin-bottom: 30px;
       .list-head,
       .list-body {
-        grid-template-columns: auto 150px;
+        grid-template-columns: auto 170px;
       }
     }
   }

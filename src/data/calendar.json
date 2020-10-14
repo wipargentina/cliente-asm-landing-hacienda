@@ -21,14 +21,26 @@
     },
     {
       "id": 4,
+      "date": "2020-10-20",
+      "title": "Olavarría - Bs. As.",
+      "tv": false
+    },
+    {
+      "id": 5,
+      "date": "2020-10-21",
+      "title": "Cabaña La Paz de Werthein",
+      "tv": true
+    },
+    {
+      "id": 6,
       "date": "2020-10-26",
       "title": "Televisado",
       "tv": true
     },
     {
-      "id": 5,
+      "id": 7,
       "date": "2020-10-30",
-      "title": "Cabaña La Paz de Werthein",
+      "title": "Cabaña Los Alfredos",
       "tv": true
     }
   ]
