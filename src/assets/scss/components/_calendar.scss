@@ -1,88 +1,93 @@
+// .calendar {
+//   padding: 20px 20px 1px 20px;
+//   // border: 1px solid white;
+//   background-color: rgba(#000, 0.5);
+//   border-top: 4px solid $primary;
+//   h4 {
+//     font-size: 1.4rem;
+//     text-transform: uppercase;
+//     font-weight: 600;
+//     margin-bottom: 8px;
+//     color: $primary;
+//   }
+
+//   ul {
+//     list-style: none;
+//     padding: 0;
+//     .list-head,
+//     .list-body {
+//       color: white;
+//       display: grid;
+//       grid-template-columns: auto 170px;
+//       text-align: left;
+//     }
+//     .list-head {
+//       border-bottom: 2px solid white;
+//       padding: 8px;
+//       font-weight: 600;
+//       font-size: 1.1rem;
+//       text-transform: uppercase;
+//       // margin-bottom: 8px;
+//     }
+//     .list-body {
+//       border-bottom: 1px solid rgba($primary, 0.6);
+//       padding: 8px;
+//       font-weight: 500;
+//       font-size: 1.2rem;
+
+//       &.expired {
+//         .list-title,
+//         .list-date {
+//           color: $gray-600;
+//           text-decoration: line-through;
+//         }
+//         img {
+//           filter: grayscale(100%);
+//           opacity: 0.5;
+//         }
+//       }
+
+//       .list-title {
+//       }
+//       .list-date {
+//         text-align: right;
+//         img {
+//           height: 20px;
+//           margin-left: 8px;
+//         }
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//       }
+//     }
+//   }
+// }
+
+// @media (max-width: 767px) {
+//   .calendar {
+//     padding: 30px 8px;
+//     background-color: rgba(#000, 0.5);
+//     h4 {
+//       font-size: 1.4rem;
+//       text-transform: uppercase;
+//       font-weight: 600;
+//       margin-bottom: 8px;
+//       color: $primary;
+//     }
+
+//     ul {
+//       list-style: none;
+//       padding: 0;
+//       margin-bottom: 30px;
+//       .list-head,
+//       .list-body {
+//         grid-template-columns: auto 170px;
+//       }
+//     }
+//   }
+// }
+
 .calendar {
-  padding: 20px 20px 1px 20px;
-  // border: 1px solid white;
-  background-color: rgba(#000, 0.5);
-  border-top: 4px solid $primary;
-  h4 {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: $primary;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    .list-head,
-    .list-body {
-      color: white;
-      display: grid;
-      grid-template-columns: auto 170px;
-      text-align: left;
-    }
-    .list-head {
-      border-bottom: 2px solid white;
-      padding: 8px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      // margin-bottom: 8px;
-    }
-    .list-body {
-      border-bottom: 1px solid rgba($primary, 0.6);
-      padding: 8px;
-      font-weight: 500;
-      font-size: 1.2rem;
-
-      &.expired {
-        .list-title,
-        .list-date {
-          color: $gray-600;
-          text-decoration: line-through;
-        }
-        img {
-          filter: grayscale(100%);
-          opacity: 0.5;
-        }
-      }
-
-      .list-title {
-      }
-      .list-date {
-        text-align: right;
-        img {
-          height: 20px;
-          margin-left: 8px;
-        }
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-    }
-  }
-}
-
-@media (max-width: 767px) {
-  .calendar {
-    padding: 30px 8px;
-    background-color: rgba(#000, 0.5);
-    h4 {
-      font-size: 1.4rem;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: $primary;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 30px;
-      .list-head,
-      .list-body {
-        grid-template-columns: auto 170px;
-      }
-    }
-  }
+  //background-color: red;
+  //min-height: 1200px;
 }

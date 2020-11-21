@@ -1,31 +1,25 @@
 import React from 'react';
-import Form from './Form';
+import { Link as Scroll } from 'react-scroll';
 
-import HeroHeadline from './HeroHeadline';
-import Calendar from './Calendar';
-// import HeroInfo from "./HeroInfo";
-import calendar from '../data/calendar.json';
-
-function Hero(props) {
+export default function Hero() {
   return (
     <div className='hero'>
-      <div className='darken'></div>
-      <div className='content'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-md-7 col-lg-7 col-xl-8'>
-              <HeroHeadline />
-              {/* <HeroInfo /> */}
-              <Calendar calendar={calendar} />
-            </div>
-            <div className='col-md-5 col-lg-5 col-xl-4'>
-              <Form calendar={calendar} />
-            </div>
-          </div>
+      <div className='row justify-content-center'>
+        <div className='col-md-8'>
+          <h1>Remate de Hacienda y Cereales</h1>
+          <h4>Más de 30 años acompañando al productor agropecuario.</h4>
+          <Scroll
+            to='auction'
+            spy={true}
+            smooth={true}
+            offset={-98}
+            duration={599}
+            className='btn btn-lg px-5 mt-5 btn-primary text-white'
+          >
+            PRÓXIMO REMATE
+          </Scroll>
         </div>
       </div>
     </div>
   );
 }
-
-export default Hero;

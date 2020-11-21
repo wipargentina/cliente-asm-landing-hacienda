@@ -1,9 +1,18 @@
 .form {
+  position: sticky;
+  top: 130px;
+  .card {
+    border-radius: 0;
+    border: 2px dotted $gray-300;
+  }
   .form-group {
     margin-bottom: 8px;
     label {
       font-size: 0.9rem;
-      margin-bottom: 0;
+      margin-bottom: 4px;
+    }
+    .form-control {
+      border-radius: 0;
     }
   }
   .tags {
