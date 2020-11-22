@@ -1,9 +1,9 @@
 const moment = require('moment');
 
 const today = moment().format('YYYY-MM-DD');
-const apiURL = `https://alfredosmondino.herokuapp.com/eventos?_where[fecha_gte]=${today}&_sort=fecha:ASC`;
+const apiURL = `https://alfredosmondino.herokuapp.com/eventos?_where[fecha_gte]=${today}&_limit=1`;
 
-export default function getCalendar() {
+export default function getNextAuction() {
   return fetch(apiURL)
     .then((resp) => resp.json())
     .then((response) => {

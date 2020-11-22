@@ -3,7 +3,7 @@ import React from 'react';
 export default function Loading() {
   return (
     <div className='container'>
-      <div>cargando...</div>
+      <div>Actualizando lista de remates...</div>
     </div>
   );
 }

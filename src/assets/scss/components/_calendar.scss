@@ -90,4 +90,40 @@
 .calendar {
   //background-color: red;
   //min-height: 1200px;
+  h3 {
+    color: $primary;
+    font-size: 1.4rem;
+  }
+  .card {
+    //background-color: red;
+    .card-img-top {
+      // background-color: $gray-100;
+      padding: 4px 30px;
+      border-bottom: 1px solid $gray-200;
+      // height: 80px;
+      // width: 100%;
+      // object-fit: cover;
+    }
+    .card-body {
+      //background-color: green;
+      text-align: center;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      .card-title {
+        margin-bottom: 4px;
+      }
+      .card-text {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: $primary;
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 }

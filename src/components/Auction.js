@@ -22,25 +22,29 @@ export default function Auction() {
         <div className='container'>
           <div className='row'>
             <div className='col-md-8'>
-              {isLoading && <Loading />}
               {calendar.length > 0 && (
                 <>
                   <div className='calendar'>
-                    <h3>Próximos Remates</h3>
-                    <hr />
+                    <h3>Próximo Remate</h3>
+                    {/* <hr /> */}
+                    {isLoading && <Loading />}
                     <div className='row'>
                       {calendar.map((item, index) => (
-                        <>
+                        <React.Fragment key={item.id}>
                           {index === 0 ? (
                             <div className='col-md-12'>
                               <AuctionNext item={item} />
+                              <hr />
+                              <h3 className='mt-5 mb-4'>
+                                Calendario de Remates
+                              </h3>
                             </div>
                           ) : (
                             <div className='col-md-6'>
                               <AuctionItem item={item} />
                             </div>
                           )}
-                        </>
+                        </React.Fragment>
                       ))}
                     </div>
                   </div>

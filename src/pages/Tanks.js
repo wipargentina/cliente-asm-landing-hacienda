@@ -1,101 +1,135 @@
-import React from "react";
-
-import faFacebook from "../assets/static/facebook-f-brands.svg";
-import faInstagram from "../assets/static/instagram-brands.svg";
-import faTwitter from "../assets/static/twitter-brands.svg";
-import faWhatsapp from "../assets/static/whatsapp-brands.svg";
+import React, { useEffect, useState } from 'react';
+import getNextAuction from '../services/getNextAuction';
+import moment from 'moment';
+import faFacebook from '../assets/static/facebook-f-brands.svg';
+import faInstagram from '../assets/static/instagram-brands.svg';
+import faTwitter from '../assets/static/twitter-brands.svg';
+import faWhatsapp from '../assets/static/whatsapp-brands.svg';
 
 function Tanks(props) {
+  const [isLoading, setIsLoading] = useState(false);
+  const [auction, setAuction] = useState([]);
+
+  useEffect(function () {
+    setIsLoading(true);
+    getNextAuction().then((calendar) => {
+      setAuction(calendar);
+      setIsLoading(false);
+    });
+  }, []);
   return (
-    <div className="tanks">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-md-10">
+    <div className='tanks'>
+      <div className='container'>
+        <div className='row justify-content-center'>
+          <div className='col-md-10'>
             <h2>Gracias por registrarte</h2>
-            <p className="lead mb-5">
+            <p className='lead mb-3'>
               Uno de nuestros comerciales se pondrán en contacto contigo
             </p>
-            <h4 className="mt-3 mb-3">Escribinos por Whatsapp</h4>
-            <div className="whatsapp">
-              <div className="row justify-content-center">
-                <div className="col-md-3">
+            {isLoading && 'cargando enlace a preoferta'}
+            {auction.map((item) => (
+              <>
+                {item.link_preoferta && (
+                  <div className='mb-5'>
+                    <h4>Realizá tu pre oferta</h4>
+                    <h6>
+                      Del {moment(item.inicio_preoferta).format('DD/MM HH:mm')}
+                      hs al {moment(item.fin_preoferta).format('DD/MM HH:mm')}
+                      hs
+                    </h6>
+                    <a
+                      className='btn btn-primary'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      href={item.link_preoferta}
+                    >
+                      ACCESO A PRE OFERTA
+                    </a>
+                  </div>
+                )}
+              </>
+            ))}
+            <h4 className='mt-3 mb-3'>Escribinos por Whatsapp</h4>
+            <div className='whatsapp'>
+              <div className='row justify-content-center'>
+                <div className='col-md-3'>
                   <h5>Hacienda Gorda</h5>
                   <h6>Francisco Garin</h6>
                   <a
-                    id="btn-hacienda"
-                    href="https://wa.me/543516509975"
-                    className="btn btn-success"
-                    rel="noopener noreferrer"
-                    target="_blank"
+                    id='btn-hacienda'
+                    href='https://wa.me/543516509975'
+                    className='btn btn-success'
+                    rel='noopener noreferrer'
+                    target='_blank'
                   >
-                    <img src={faWhatsapp} alt="" /> +54 351 650 9975
+                    <img src={faWhatsapp} alt='' /> +54 351 650 9975
                   </a>
                 </div>
-                <div className="col-md-3">
+                <div className='col-md-3'>
                   <h5>Invernada y Cría</h5>
                   <h6>Mario Masanti</h6>
                   <a
-                    id="btn-invernada"
-                    href="https://wa.me/3583647964"
-                    className="btn btn-success"
-                    rel="noopener noreferrer"
-                    target="_blank"
+                    id='btn-invernada'
+                    href='https://wa.me/3583647964'
+                    className='btn btn-success'
+                    rel='noopener noreferrer'
+                    target='_blank'
                   >
-                    <img src={faWhatsapp} alt="" /> +54 358 3647 964
+                    <img src={faWhatsapp} alt='' /> +54 358 3647 964
                   </a>
                 </div>
-                <div className="col-md-3">
+                <div className='col-md-3'>
                   <h5>Reproductores</h5>
                   <h6>Leonardo Pérez</h6>
                   <a
-                    id="btn-reproductores"
-                    href="https://wa.me/543583640202"
-                    className="btn btn-success"
-                    rel="noopener noreferrer"
-                    target="_blank"
+                    id='btn-reproductores'
+                    href='https://wa.me/543583640202'
+                    className='btn btn-success'
+                    rel='noopener noreferrer'
+                    target='_blank'
                   >
-                    <img src={faWhatsapp} alt="" /> +54 358 3640 202
+                    <img src={faWhatsapp} alt='' /> +54 358 3640 202
                   </a>
                 </div>
               </div>
             </div>
-            <h4 className="mb-2">Te invitamos a que visites nuestra web</h4>
+            <h4 className='mb-2'>Te invitamos a que visites nuestra web</h4>
             <a
-              id="link-web"
-              href="https://alfredosmondino.com/"
-              rel="noopener noreferrer"
-              target="_blank"
+              id='link-web'
+              href='https://alfredosmondino.com/'
+              rel='noopener noreferrer'
+              target='_blank'
             >
               https://alfredosmondino.com/
             </a>
-            <h4 className="mt-3">o que nos sigas en nuestras redes</h4>
-            <div className="social">
+            <h4 className='mt-3'>o que nos sigas en nuestras redes</h4>
+            <div className='social'>
               <a
-                id="btn-facebook"
-                href="https://es-la.facebook.com/alfredosmondino/"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="btn btn-link"
+                id='btn-facebook'
+                href='https://es-la.facebook.com/alfredosmondino/'
+                rel='noopener noreferrer'
+                target='_blank'
+                className='btn btn-link'
               >
-                <img src={faFacebook} alt="facebook" />
+                <img src={faFacebook} alt='facebook' />
               </a>
               <a
-                id="btn-instagram"
-                href="https://twitter.com/alfredosmondino"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="btn btn-link"
+                id='btn-instagram'
+                href='https://twitter.com/alfredosmondino'
+                rel='noopener noreferrer'
+                target='_blank'
+                className='btn btn-link'
               >
-                <img src={faInstagram} alt="instagram" />
+                <img src={faInstagram} alt='instagram' />
               </a>
               <a
-                id="btn-twitter"
-                href="https://twitter.com/alfredosmondino"
-                rel="noopener noreferrer"
-                target="_blank"
-                className="btn btn-link"
+                id='btn-twitter'
+                href='https://twitter.com/alfredosmondino'
+                rel='noopener noreferrer'
+                target='_blank'
+                className='btn btn-link'
               >
-                <img src={faTwitter} alt="twitter" />
+                <img src={faTwitter} alt='twitter' />
               </a>
             </div>
           </div>
