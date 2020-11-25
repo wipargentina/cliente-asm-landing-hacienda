@@ -29,7 +29,7 @@ export default function Cereals() {
               smooth={true}
               offset={-98}
               duration={599}
-              className='btn btn-outline-dark mt-3'
+              className='btn btn-light mt-3'
             >
               Más información
             </Scroll>
