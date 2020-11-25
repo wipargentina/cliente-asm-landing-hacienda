@@ -9,7 +9,7 @@ export default function AuctionItem(props) {
   const imagen = item.imagen[0] && item.imagen[0].formats.small.url;
   return (
     <>
-      <div className='card mb-3'>
+      <div className='card'>
         <img src={imagen ? imagen : Logotipo} alt='' className='card-img-top' />
         <div className='card-body'>
           <div>

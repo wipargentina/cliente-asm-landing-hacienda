@@ -5,6 +5,7 @@ import faFacebook from '../assets/static/facebook-f-brands.svg';
 import faInstagram from '../assets/static/instagram-brands.svg';
 import faTwitter from '../assets/static/twitter-brands.svg';
 import faWhatsapp from '../assets/static/whatsapp-brands.svg';
+import IconBell from '../components/IconBell';
 
 function Tanks(props) {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,29 +23,45 @@ function Tanks(props) {
       <div className='container'>
         <div className='row justify-content-center'>
           <div className='col-md-10'>
-            <h2>Gracias por registrarte</h2>
-            <p className='lead mb-3'>
+            <h3>Gracias por registrarte</h3>
+            <p className='lead mb-4'>
               Uno de nuestros comerciales se pondrán en contacto contigo
             </p>
             {isLoading && 'cargando enlace a preoferta'}
             {auction.map((item) => (
               <>
                 {item.link_preoferta && (
-                  <div className='mb-5'>
-                    <h4>Realizá tu pre oferta</h4>
-                    <h6>
-                      Del {moment(item.inicio_preoferta).format('DD/MM HH:mm')}
-                      hs al {moment(item.fin_preoferta).format('DD/MM HH:mm')}
-                      hs
-                    </h6>
-                    <a
-                      className='btn btn-primary'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      href={item.link_preoferta}
-                    >
-                      ACCESO A PRE OFERTA
-                    </a>
+                  <div className='row justify-content-center'>
+                    <div className='col-md-5'>
+                      <div className='pre-offer mb-5'>
+                        <div className='card'>
+                          <div className='card-body py-4'>
+                            <h4>Pre Oferta habilitada</h4>
+                            <h6 className='mb-3'>
+                              Del{' '}
+                              {moment(item.inicio_preoferta).format(
+                                'DD/MM HH:mm'
+                              )}
+                              hs al{' '}
+                              {moment(item.fin_preoferta).format('DD/MM HH:mm')}
+                              hs
+                            </h6>
+                            <a
+                              id='btn-pre-offer'
+                              className='btn btn-success btn-lg'
+                              target='_blank'
+                              rel='noopener noreferrer'
+                              href={item.link_preoferta}
+                            >
+                              <div className='notification'>
+                                <IconBell />
+                                Acceda a la Pre Oferta
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 )}
               </>
@@ -58,7 +75,7 @@ function Tanks(props) {
                   <a
                     id='btn-hacienda'
                     href='https://wa.me/543516509975'
-                    className='btn btn-success'
+                    className='btn btn-outline-success mb-4'
                     rel='noopener noreferrer'
                     target='_blank'
                   >
@@ -71,7 +88,7 @@ function Tanks(props) {
                   <a
                     id='btn-invernada'
                     href='https://wa.me/3583647964'
-                    className='btn btn-success'
+                    className='btn btn-outline-success mb-4'
                     rel='noopener noreferrer'
                     target='_blank'
                   >
@@ -84,7 +101,7 @@ function Tanks(props) {
                   <a
                     id='btn-reproductores'
                     href='https://wa.me/543583640202'
-                    className='btn btn-success'
+                    className='btn btn-outline-success mb-4'
                     rel='noopener noreferrer'
                     target='_blank'
                   >

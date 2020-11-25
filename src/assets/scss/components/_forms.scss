@@ -3,7 +3,8 @@
   top: 130px;
   .card {
     border-radius: 0;
-    border: 2px dotted $gray-300;
+    border: 2px dotted rgba($primary, 0.6);
+    box-shadow: 0 0 8px rgba(black, 0.1);
   }
   .form-group {
     margin-bottom: 8px;

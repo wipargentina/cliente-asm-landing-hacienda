@@ -95,14 +95,13 @@
     font-size: 1.4rem;
   }
   .card {
-    //background-color: red;
+    margin-bottom: 30px;
     .card-img-top {
-      // background-color: $gray-100;
-      padding: 4px 30px;
+      padding: 8px;
       border-bottom: 1px solid $gray-200;
-      // height: 80px;
-      // width: 100%;
-      // object-fit: cover;
+      height: 150px;
+      width: 100%;
+      object-fit: cover;
     }
     .card-body {
       //background-color: green;

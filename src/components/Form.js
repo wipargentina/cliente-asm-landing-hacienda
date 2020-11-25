@@ -168,7 +168,7 @@ class Form extends Component {
                 type='submit'
                 disabled={isSending}
               >
-                {isSending ? 'ENVIANDO ...' : '¡REGISTRARME!'}
+                {isSending ? 'Enviando ...' : 'Enviar Registro'}
               </button>
             </div>
           </div>

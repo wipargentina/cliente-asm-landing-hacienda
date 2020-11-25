@@ -22,12 +22,11 @@ export default function Auction() {
         <div className='container'>
           <div className='row'>
             <div className='col-md-8'>
-              <h3>Próximo Remate</h3>
+              <h3 className='text-primary'>Próximo Remate</h3>
               {isLoading && <Loading />}
               {calendar.length > 0 && (
                 <>
                   <div className='calendar'>
-                    {/* <hr /> */}
                     <div className='row'>
                       {calendar.map((item, index) => (
                         <React.Fragment key={item.id}>
