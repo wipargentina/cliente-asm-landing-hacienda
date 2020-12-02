@@ -41,7 +41,7 @@ class Form extends Component {
 
     window.location.assign(process.env.PUBLIC_URL + '/gracias');
 
-    //console.log(this.state);
+    console.log(this.state);
 
     //   axios
     //     .post(
@@ -74,12 +74,13 @@ class Form extends Component {
 
   render() {
     const isSending = this.state.isSending;
+    const event = this.props.event;
     return (
-      <div className='form'>
+      <div id='register' className='form'>
         <form onSubmit={this.handleSubmit}>
           <div className='card'>
             <div className='card-body'>
-              <h5>Completa tus datos aquí</h5>
+              <h5>Completa con tus datos aquí</h5>
               <div className='form-group'>
                 <label htmlFor=''>Nombre</label>
                 <input
@@ -87,6 +88,7 @@ class Form extends Component {
                   name='fname'
                   className='form-control'
                   onChange={this.handleChange}
+                  placeholder='Nombre'
                   required
                 />
               </div>
@@ -97,6 +99,7 @@ class Form extends Component {
                   name='lname'
                   className='form-control'
                   onChange={this.handleChange}
+                  placeholder='Apellido'
                   required
                 />
               </div>
@@ -107,6 +110,7 @@ class Form extends Component {
                   name='phone'
                   className='form-control'
                   onChange={this.handleChange}
+                  placeholder='Teléfono'
                   required
                 />
               </div>
@@ -117,6 +121,7 @@ class Form extends Component {
                   name='email'
                   className='form-control'
                   onChange={this.handleChange}
+                  placeholder='Email'
                   required
                 />
               </div>
@@ -127,13 +132,14 @@ class Form extends Component {
                   name='location'
                   className='form-control'
                   onChange={this.handleChange}
+                  placeholder='Localidad'
                   required
                 />
               </div>
-              <div>
+              <div className='tags'>
                 <label className='mb-1'>¿Cuál es tu tema de interés?</label>
-                <div className='tags'>
-                  <div className='custom-control custom-radio custom-control-inline'>
+                <div className=''>
+                  <div className='custom-control custom-radio'>
                     <input
                       className='custom-control-input'
                       type='radio'
@@ -147,28 +153,62 @@ class Form extends Component {
                       Próximo Remate
                     </label>
                   </div>
-                  <div className='custom-control custom-radio custom-control-inline'>
+                  {event.map((event) => (
+                    <>
+                      {event.link_preoferta && (
+                        <div className='custom-control custom-radio'>
+                          <input
+                            className='custom-control-input'
+                            type='radio'
+                            name='tags'
+                            id='tags-2'
+                            value='pre-oferta'
+                            onChange={this.handleOptionChange}
+                            checked={this.state.tags === 'pre-oferta'}
+                          />
+                          <label
+                            className='custom-control-label'
+                            htmlFor='tags-2'
+                          >
+                            Pre Oferta
+                          </label>
+                        </div>
+                      )}
+                    </>
+                  ))}
+
+                  <div className='custom-control custom-radio'>
                     <input
                       className='custom-control-input'
                       type='radio'
                       name='tags'
-                      id='tags-2'
+                      id='tags-3'
                       onChange={this.handleOptionChange}
                       value='operaciones'
                       checked={this.state.tags === 'operaciones'}
                     />
-                    <label className='custom-control-label' htmlFor='tags-2'>
-                      Operar con Nosotros
+                    <label className='custom-control-label' htmlFor='tags-3'>
+                      Otras Operaciones
                     </label>
                   </div>
                 </div>
               </div>
               <button
-                className='btn btn-primary btn-lg btn-block'
+                className='btn btn-lg btn-success btn-block'
                 type='submit'
                 disabled={isSending}
               >
-                {isSending ? 'Enviando ...' : 'Enviar Registro'}
+                {isSending ? (
+                  <>
+                    Enviando
+                    <div
+                      class='spinner-border spinner-grow-sm'
+                      role='status'
+                    ></div>
+                  </>
+                ) : (
+                  <>Enviar Registro</>
+                )}
               </button>
             </div>
           </div>

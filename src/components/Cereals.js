@@ -24,10 +24,10 @@ export default function Cereals() {
               el manejo de su mercadería con el compromiso que nos caracteriza.
             </p>
             <Scroll
-              to='auction'
+              to='register'
               spy={true}
               smooth={true}
-              offset={-98}
+              offset={-120}
               duration={599}
               className='btn btn-light mt-3'
             >

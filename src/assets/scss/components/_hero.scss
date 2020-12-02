@@ -1,170 +1,11 @@
-// .hero {
-//   position: relative;
-//   background-image: url('../../static/bg-hero.jpg');
-//   background-size: cover;
-//   background-position: center bottom;
-//   .darken {
-//     background-color: rgba(#000, 0.6);
-//     height: 740px;
-//   }
-//   .content {
-//     height: 740px;
-//     position: absolute;
-//     top: 0;
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-//     .container {
-//       .headline {
-//         color: white;
-//         margin-top: 0px;
-//         .pretitle {
-//           text-transform: uppercase;
-//           font-size: 1.6em;
-//           font-weight: 600;
-//           margin-bottom: 8px;
-//         }
-//         .title {
-//           margin-bottom: 20px;
-//           img {
-//             width: 340px;
-//             margin-bottom: 12px;
-//           }
-//           h2 {
-//             font-weight: 600;
-//             font-size: 2.4rem;
-//             line-height: 2.4rem;
-//             margin-bottom: 0;
-//           }
-//         }
-//         .subtitle {
-//           text-transform: inherit;
-//           margin-bottom: 30px;
-//           font-size: 2em;
-//         }
-//       }
-//       .logos {
-//         margin-bottom: 30px;
-//         img {
-//           max-height: 50px;
-//         }
-//       }
-//       .info {
-//         margin-bottom: 30px;
-//         .card {
-//           background-color: transparent;
-//           border: none;
-//           .card-body {
-//             padding: 0;
-//             .card-title {
-//               color: white;
-//               margin-bottom: 0px;
-//               font-size: 1.3em;
-//             }
-//             .card-date {
-//               color: $primary;
-//               font-size: 2em;
-//               font-weight: 600;
-//               letter-spacing: 0.04em;
-//               line-height: 1.4em;
-//             }
-//             .card-logo {
-//               margin-top: 8px;
-//               .logo-don-benjamin {
-//                 height: 60px;
-//               }
-//               .logo-canal-rural {
-//                 margin-top: 8px;
-//                 height: 60px;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: 767px) {
-//   .hero {
-//     .darken {
-//       height: 1300px;
-//       background-color: rgba(#000, 0.8);
-//     }
-//     .content {
-//       height: 1300px;
-//       .container {
-//         text-align: center;
-//         .headline {
-//           margin-top: 0;
-//           margin-bottom: 30px;
-//           .pretitle {
-//             text-transform: uppercase;
-//             font-size: 1.4em;
-//             font-weight: 600;
-//             margin-bottom: 8px;
-//           }
-//           .title {
-//             margin-bottom: 20px;
-//             img {
-//               width: 240px;
-//               margin-bottom: 12px;
-//             }
-//             h2 {
-//               font-size: 1.6em;
-//               font-weight: 600;
-//             }
-//           }
-//           .subtitle {
-//             text-transform: inherit;
-//             margin-bottom: 20px;
-//             font-size: 1.4em;
-//           }
-//         }
-//         .logos {
-//           margin-bottom: 50px;
-//           img {
-//             max-height: 46px;
-//           }
-//         }
-//         .info {
-//           margin-bottom: 30px;
-//           .card {
-//             background-color: transparent;
-//             margin-bottom: 16px;
-//             .card-body {
-//               padding: 0;
-//               .card-title {
-//                 font-size: 1.1em;
-//               }
-//               .card-date {
-//                 font-size: 1.5em;
-//                 font-weight: 600;
-//                 letter-spacing: 0em;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 .hero {
-  // background-image: url('../../static/bg-hero.jpg');
-  // background-size: cover;
-  // height: 600px;
-  // color: white;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // text-align: center;
   background: #000;
   position: relative;
   .hero-bg {
     height: 600px;
-    width: auto;
+    width: 100%;
     object-fit: cover;
-    opacity: 0.4;
+    opacity: 0.5;
   }
   .hero-content {
     position: absolute;
@@ -184,11 +25,15 @@
 
 @media (max-width: 767px) {
   .hero {
-    // height: 500px;
-    // padding: 0 20px;
+    .hero-bg {
+      height: 440px;
+    }
+    .hero-content {
+      height: 440px;
+    }
     h1 {
       text-transform: uppercase;
-      font-size: 3rem;
+      font-size: 2.2rem;
     }
   }
 }

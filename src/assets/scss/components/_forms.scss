@@ -7,30 +7,30 @@
     box-shadow: 0 0 8px rgba(black, 0.1);
   }
   .form-group {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     label {
-      font-size: 0.9rem;
-      margin-bottom: 4px;
+      font-size: 0.8rem;
+      margin-bottom: 0px;
+      display: none;
     }
     .form-control {
       border-radius: 0;
     }
   }
   .tags {
-    display: flex;
-    margin-bottom: 16px;
+    margin: 16px 0;
     .custom-control {
-      // margin-right: 0;
       display: flex;
       align-items: center;
-      .custom-control-input {
-        background-color: blue;
-        // padding: 0;
-      }
       .custom-control-label {
-        font-size: 0.8rem;
-        padding-top: 2px;
       }
     }
+  }
+  .spinner-border {
+    //border: 0.2rem;
+    border: 0.15em solid currentColor;
+    border-right-color: transparent;
+    margin-bottom: 2px;
+    margin-left: 6px;
   }
 }

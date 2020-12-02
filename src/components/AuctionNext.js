@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link as Scroll } from 'react-scroll';
 import moment from 'moment';
 import IconBell from './IconBell';
 import logoCanalRural from '../assets/static/logo-canal-rural.png';
@@ -6,15 +7,6 @@ import logoCanalRural from '../assets/static/logo-canal-rural.png';
 export default function AuctionNext(props) {
   const item = props.item;
   const imagen = props.item.imagen[0] && item.imagen[0].formats.small.url;
-  const [message, setMessage] = useState(false);
-
-  const handleClick = () => {
-    setMessage(true);
-    const timer = setTimeout(() => {
-      setMessage(false);
-    }, 5000);
-    return () => clearTimeout(timer);
-  };
   return (
     <div className='mb-5'>
       {imagen && <img src={imagen} alt='' className='img-fluid imagen' />}
@@ -26,32 +18,56 @@ export default function AuctionNext(props) {
         {item.televisado && (
           <>
             <span className='mr-2'> por Canal Rural</span>
+            <br className='d-sm-none' />
             <img src={logoCanalRural} alt='canal rural' height='30' />
           </>
         )}
       </h4>
       <p className='lead'>
-        Registrate para participar de nuestro próximo remate
+        Registrate para participar de nuestro próximo Remate y de las Pre
+        Ofertas
       </p>
       {item.link_preoferta && (
         <div className='pre-offer'>
-          <button onClick={handleClick} className='btn btn-success mr-3 '>
+          <Scroll
+            to='register'
+            spy={false}
+            smooth={true}
+            offset={-100}
+            duration={599}
+            className='btn btn-outline-success'
+          >
             <div className='notification'>
               <IconBell />
-              Pre Oferta habilitada
+              PRE OFERTA DISPONIBLE
             </div>
-          </button>
+          </Scroll>
           <div className='date'>
-            Del <b>{moment(item.inicio_preoferta).format('DD/MM HH:mm')}hs</b>{' '}
-            al <b>{moment(item.fin_preoferta).format('DD/MM HH:mm')}hs</b>
+            {item.inicio_preoferta && (
+              <div>
+                Inicio Pre Oferta:{' '}
+                <b>{moment(item.inicio_preoferta).format('DD/MM HH:mm')}hs</b>{' '}
+              </div>
+            )}
+            {item.fin_preoferta && (
+              <div>
+                Cierre Pre Oferta:{' '}
+                <b>{moment(item.fin_preoferta).format('DD/MM HH:mm')}hs</b>
+              </div>
+            )}
           </div>
-          {message && (
-            <div className='message'>
-              Completá el formulario para obtener el enlace de acceso.
-            </div>
-          )}
         </div>
       )}
+      <Scroll
+        to='register'
+        spy={false}
+        smooth={true}
+        offset={-100}
+        duration={599}
+        className='btn btn-lg btn-primary d-sm-none'
+      >
+        ¡REGISTRATE AHORA!
+      </Scroll>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Loading from './Loading';
-import getCalendar from '../services/getCalendar';
+import { getCalendar, getEvent } from '../services/getCalendar';
 import Form from './Form';
 import AuctionItem from './AuctionItem';
 import AuctionNext from './AuctionNext';
@@ -8,12 +8,16 @@ import AuctionNext from './AuctionNext';
 export default function Auction() {
   const [isLoading, setIsLoading] = useState(false);
   const [calendar, setCalendar] = useState([]);
+  const [event, setEvent] = useState([]);
 
   useEffect(function () {
     setIsLoading(true);
     getCalendar().then((calendar) => {
       setCalendar(calendar);
       setIsLoading(false);
+    });
+    getEvent().then((event) => {
+      setEvent(event);
     });
   }, []);
   return (
@@ -23,6 +27,7 @@ export default function Auction() {
           <div className='row'>
             <div className='col-md-8'>
               <h3 className='text-primary'>Próximo Remate</h3>
+              <h2>Especiales de Fin de Año!</h2>
               {isLoading && <Loading />}
               {calendar.length > 0 && (
                 <>
@@ -52,7 +57,7 @@ export default function Auction() {
             </div>
             <div className='col-md-4'>
               <div className='form'>
-                <Form />
+                <Form event={event} />
               </div>
             </div>
           </div>

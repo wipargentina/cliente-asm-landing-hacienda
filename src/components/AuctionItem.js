@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import Logotipo from '../assets/static/logo-mondino.jpg';
+import Logotipo from '../assets/static/logo-mondino-negative.jpg';
 import logoCanalRural from '../assets/static/logo-canal-rural.png';
 
 export default function AuctionItem(props) {
