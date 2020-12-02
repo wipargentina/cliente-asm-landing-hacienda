@@ -24,8 +24,8 @@ export default function AuctionNext(props) {
         )}
       </h4>
       <p className='lead'>
-        Registrate para participar de nuestro próximo Remate y de las Pre
-        Ofertas
+        Registrate para participar de nuestro próximo Remate{' '}
+        {item.link_preoferta && <> o de la Pre Oferta</>}
       </p>
       {item.link_preoferta && (
         <div className='pre-offer'>
