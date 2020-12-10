@@ -4,6 +4,7 @@ import { getCalendar, getEvent } from '../services/getCalendar';
 import Form from './Form';
 import AuctionItem from './AuctionItem';
 import AuctionNext from './AuctionNext';
+import AuctionEmpty from './AuctionEmpty';
 
 export default function Auction() {
   const [isLoading, setIsLoading] = useState(false);
@@ -26,11 +27,11 @@ export default function Auction() {
         <div className='container'>
           <div className='row'>
             <div className='col-md-8'>
-              <h3 className='text-primary'>Próximo Remate</h3>
-              <h2>Especiales de Fin de Año!</h2>
+              <h3 className='text-primary'>Remate de Hacienda</h3>
               {isLoading && <Loading />}
-              {calendar.length > 0 && (
+              {calendar.length > 0 ? (
                 <>
+                  <h2>Especiales de Fin de Año!</h2>
                   <div className='calendar'>
                     <div className='row'>
                       {calendar.map((item, index) => (
@@ -52,6 +53,14 @@ export default function Auction() {
                       ))}
                     </div>
                   </div>
+                </>
+              ) : (
+                <>
+                  {!isLoading && (
+                    <>
+                      <AuctionEmpty />
+                    </>
+                  )}
                 </>
               )}
             </div>

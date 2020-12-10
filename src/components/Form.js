@@ -152,8 +152,8 @@ class Form extends Component {
                       Próximo Remate
                     </label>
                   </div>
-                  {event.map((event) => (
-                    <>
+                  {event.map((event, index) => (
+                    <React.Fragment key={index}>
                       {event.link_preoferta && (
                         <div className='custom-control custom-radio'>
                           <input
@@ -173,7 +173,7 @@ class Form extends Component {
                           </label>
                         </div>
                       )}
-                    </>
+                    </React.Fragment>
                   ))}
 
                   <div className='custom-control custom-radio'>
