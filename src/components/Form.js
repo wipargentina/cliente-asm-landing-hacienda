@@ -183,10 +183,25 @@ class Form extends Component {
                       name='tags'
                       id='tags-3'
                       onChange={this.handleOptionChange}
+                      value='cereales'
+                      checked={this.state.tags === 'cereales'}
+                    />
+                    <label className='custom-control-label' htmlFor='tags-3'>
+                      Cereales
+                    </label>
+                  </div>
+
+                  <div className='custom-control custom-radio'>
+                    <input
+                      className='custom-control-input'
+                      type='radio'
+                      name='tags'
+                      id='tags-4'
+                      onChange={this.handleOptionChange}
                       value='operaciones'
                       checked={this.state.tags === 'operaciones'}
                     />
-                    <label className='custom-control-label' htmlFor='tags-3'>
+                    <label className='custom-control-label' htmlFor='tags-4'>
                       Otras Operaciones
                     </label>
                   </div>
@@ -201,7 +216,7 @@ class Form extends Component {
                   <>
                     Enviando
                     <div
-                      class='spinner-border spinner-grow-sm'
+                      className='spinner-border spinner-grow-sm'
                       role='status'
                     ></div>
                   </>

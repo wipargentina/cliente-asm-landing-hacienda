@@ -39,10 +39,14 @@ export default function Auction() {
                           {index === 0 ? (
                             <div className='col-md-12'>
                               <AuctionNext item={item} />
-                              <hr />
-                              <h3 className='mt-5 mb-4'>
-                                Calendario de Remates
-                              </h3>
+                              {calendar.length > 1 && (
+                                <>
+                                  <hr />
+                                  <h3 className='mt-5 mb-4'>
+                                    Calendario de Remates
+                                  </h3>
+                                </>
+                              )}
                             </div>
                           ) : (
                             <div className='col-md-6'>
