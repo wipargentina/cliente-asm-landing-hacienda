@@ -198,10 +198,25 @@ class Form extends Component {
                       name='tags'
                       id='tags-4'
                       onChange={this.handleOptionChange}
+                      value='inmobiliario'
+                      checked={this.state.tags === 'inmobiliario'}
+                    />
+                    <label className='custom-control-label' htmlFor='tags-4'>
+                      Inmobiliario Rural
+                    </label>
+                  </div>
+
+                  <div className='custom-control custom-radio'>
+                    <input
+                      className='custom-control-input'
+                      type='radio'
+                      name='tags'
+                      id='tags-5'
+                      onChange={this.handleOptionChange}
                       value='operaciones'
                       checked={this.state.tags === 'operaciones'}
                     />
-                    <label className='custom-control-label' htmlFor='tags-4'>
+                    <label className='custom-control-label' htmlFor='tags-5'>
                       Otras Operaciones
                     </label>
                   </div>
