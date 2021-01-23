@@ -31,7 +31,6 @@ export default function Auction() {
               {isLoading && <Loading />}
               {calendar.length > 0 ? (
                 <>
-                  <h2>Especiales de Fin de Año!</h2>
                   <div className='calendar'>
                     <div className='row'>
                       {calendar.map((item, index) => (
