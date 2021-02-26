@@ -27,7 +27,7 @@ export default function Auction() {
         <div className='container'>
           <div className='row'>
             <div className='col-md-8'>
-              <h3 className='text-primary'>Remate de Hacienda</h3>
+              <h3 className='text-primary mb-4'>Remate de Hacienda</h3>
               {isLoading && <Loading />}
               {calendar.length > 0 ? (
                 <>
