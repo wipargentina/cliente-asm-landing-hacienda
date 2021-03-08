@@ -67,13 +67,13 @@ class Form extends Component {
         });
       });
 
-    //console.log(this.state);
-    // window.location.assign(process.env.PUBLIC_URL + '/gracias');
+    // console.log(this.state);
+    //window.location.assign(process.env.PUBLIC_URL + '/gracias');
   }
 
   render() {
     const isSending = this.state.isSending;
-    const event = this.props.event;
+    // const event = this.props.event;
     return (
       <div id='register' className='form'>
         <form onSubmit={this.handleSubmit}>
@@ -152,29 +152,6 @@ class Form extends Component {
                       Próximo Remate
                     </label>
                   </div>
-                  {event.map((event, index) => (
-                    <React.Fragment key={index}>
-                      {event.link_preoferta && (
-                        <div className='custom-control custom-radio'>
-                          <input
-                            className='custom-control-input'
-                            type='radio'
-                            name='tags'
-                            id='tags-2'
-                            value='pre-oferta'
-                            onChange={this.handleOptionChange}
-                            checked={this.state.tags === 'pre-oferta'}
-                          />
-                          <label
-                            className='custom-control-label'
-                            htmlFor='tags-2'
-                          >
-                            Pre Oferta
-                          </label>
-                        </div>
-                      )}
-                    </React.Fragment>
-                  ))}
 
                   <div className='custom-control custom-radio'>
                     <input
