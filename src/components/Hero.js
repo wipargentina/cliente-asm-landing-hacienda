@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as Scroll } from 'react-scroll';
-import image from '../assets/static/bg-hero.jpg';
+import image from '../assets/static/bg-hero.webp';
 
 export default function Hero() {
   return (
@@ -9,7 +9,7 @@ export default function Hero() {
       <div className='hero-content'>
         <div className='container'>
           <div className='row justify-content-center'>
-            <div className='col-md-12'>
+            <div className='col-11 col-md-12'>
               <h1>Hacienda, Cereales e Inmobiliario Rural</h1>
               <h4>Más de 30 años acompañando al productor agropecuario</h4>
               <Scroll
