@@ -8,18 +8,53 @@
   .card {
     margin-bottom: 30px;
     .card-img-top {
-      padding: 8px;
-      border-bottom: 1px solid $gray-200;
-      height: 150px;
+      //padding: 8px;
+      //border-bottom: 1px solid $gray-200;
+      height: 100px;
       width: 100%;
       object-fit: cover;
     }
+    .card-header {
+      padding: 0;
+      // display: flex;
+      // align-items: center;
+      background-color: #fff;
+      border: 0px;
+      text-align: center;
+      .month {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        background-color: $gray-200;
+        font-weight: 700;
+        padding: 8px 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          height: 18px;
+          margin-right: 6px;
+        }
+      }
+      .text {
+        margin-top: 16px;
+        height: 30px;
+        span {
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 1.1rem;
+          padding: 2px 8px;
+          color: white;
+          background-color: $primary;
+        }
+      }
+    }
     .card-body {
-      //background-color: green;
       text-align: center;
       height: 180px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       padding: 0;
       .card-title {

@@ -9,9 +9,9 @@ export default function Hero() {
       <div className='hero-content'>
         <div className='container'>
           <div className='row justify-content-center'>
-            <div className='col-md-8'>
-              <h1>Remate de Hacienda y Cereales</h1>
-              <h4>Más de 30 años acompañando al productor agropecuario.</h4>
+            <div className='col-md-12'>
+              <h1>Hacienda, Cereales e Inmobiliario Rural</h1>
+              <h4>Más de 30 años acompañando al productor agropecuario</h4>
               <Scroll
                 to='auction'
                 spy={true}

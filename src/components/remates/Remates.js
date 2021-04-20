@@ -26,6 +26,9 @@ export default function Remates() {
             <div className='col-md-8'>
               <h3 className='text-primary mb-4'>Remate de Hacienda</h3>
               <AuctionEmpty />
+              <h4 className='text-primary text-uppercase font-weight-light mb-4'>
+                Calendario de Remates
+              </h4>
               {isLoading && <Loading />}
               <div className='calendar'>
                 <div className='row'>

@@ -79,7 +79,8 @@ class Form extends Component {
         <form onSubmit={this.handleSubmit}>
           <div className='card'>
             <div className='card-body'>
-              <h5>Completa con tus datos aquí</h5>
+              <h5 className='mb-1'>¡REGISTRATE AHORA!</h5>
+              <p className='lead mb-2'>Completa con tus datos aquí</p>
               <div className='form-group'>
                 <label htmlFor=''>Nombre</label>
                 <input
