@@ -1,23 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import getNextAuction from '../services/getNextAuction';
-import moment from 'moment';
+import React from 'react';
 import faFacebook from '../assets/static/facebook-f-brands.svg';
 import faInstagram from '../assets/static/instagram-brands.svg';
 import faTwitter from '../assets/static/twitter-brands.svg';
 import faWhatsapp from '../assets/static/whatsapp-brands.svg';
-import IconBell from '../components/IconBell';
+import faYoutube from '../assets/static/youtube-brands.svg';
 
 function Tanks(props) {
-  const [isLoading, setIsLoading] = useState(false);
-  const [auction, setAuction] = useState([]);
-
-  useEffect(function () {
-    setIsLoading(true);
-    getNextAuction().then((calendar) => {
-      setAuction(calendar);
-      setIsLoading(false);
-    });
-  }, []);
   return (
     <div className='tanks'>
       <div className='container'>
@@ -27,45 +15,6 @@ function Tanks(props) {
             <p className='lead mb-4'>
               Uno de nuestros comerciales se pondrán en contacto contigo
             </p>
-            {isLoading && 'cargando enlace a preoferta'}
-            {auction.map((item) => (
-              <>
-                {item.link_preoferta && (
-                  <div className='row justify-content-center'>
-                    <div className='col-md-5'>
-                      <div className='pre-offer mb-5'>
-                        <div className='card'>
-                          <div className='card-body py-4'>
-                            <h4>Pre Oferta habilitada</h4>
-                            <h6 className='mb-3'>
-                              Del{' '}
-                              {moment(item.inicio_preoferta).format(
-                                'DD/MM HH:mm'
-                              )}
-                              hs al{' '}
-                              {moment(item.fin_preoferta).format('DD/MM HH:mm')}
-                              hs
-                            </h6>
-                            <a
-                              id='btn-pre-offer'
-                              className='btn btn-success btn-lg'
-                              target='_blank'
-                              rel='noopener noreferrer'
-                              href={item.link_preoferta}
-                            >
-                              <div className='notification'>
-                                <IconBell />
-                                Acceda a la Pre Oferta
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </>
-            ))}
             <h4 className='mt-3 mb-3'>Escribinos por Whatsapp</h4>
             <div className='whatsapp'>
               <div className='row justify-content-center'>
@@ -147,6 +96,15 @@ function Tanks(props) {
                 className='btn btn-link'
               >
                 <img src={faTwitter} alt='twitter' />
+              </a>
+              <a
+                id='btn-youtube'
+                href='https://www.youtube.com/channel/UCgQMosm3rvXHFWKRLtr4f6g'
+                rel='noopener noreferrer'
+                target='_blank'
+                className='btn btn-link'
+              >
+                <img src={faYoutube} alt='youtube' />
               </a>
             </div>
           </div>
