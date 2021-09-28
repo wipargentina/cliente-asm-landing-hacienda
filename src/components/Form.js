@@ -41,7 +41,7 @@ class Form extends Component {
 
     axios
       .post(
-        'https://alfredosmondino.wipargentina.com/backend/mail.php',
+        'https://hook.integromat.com/ny03tobnz6e8r7eg5opm9nglb0llaanx',
         this.state
       )
       .then((response) => {
