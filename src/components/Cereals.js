@@ -24,6 +24,7 @@ export default function Cereals() {
               el manejo de su mercadería con el compromiso que nos caracteriza.
             </p>
             <Scroll
+              id='cereals'
               to='register'
               spy={true}
               smooth={true}

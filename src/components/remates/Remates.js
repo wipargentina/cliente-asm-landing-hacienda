@@ -23,7 +23,7 @@ export default function Remates() {
       <div className='auction'>
         <div className='container'>
           <div className='row'>
-            <div className='col-md-8'>
+            <div className='col-md-7 col-lg-8'>
               <h3 className='text-primary mb-4'>Remate de Hacienda</h3>
               <AuctionEmpty />
               <h4 className='text-primary text-uppercase font-weight-light mb-4'>
@@ -32,10 +32,10 @@ export default function Remates() {
               {isLoading && <Loading />}
               <div className='calendar'>
                 <div className='row'>
-                  {remates.map((item) => (
-                    <React.Fragment key={item.id}>
+                  {remates.map((item, index) => (
+                    <React.Fragment key={index}>
                       {item.date >= today && (
-                        <div className='col-md-6'>
+                        <div className='col-lg-6'>
                           <RematesItem item={item} />
                         </div>
                       )}
@@ -44,7 +44,7 @@ export default function Remates() {
                 </div>
               </div>
             </div>
-            <div className='col-md-4'>
+            <div className='col-md-5 col-lg-4'>
               <div className='form'>
                 <Form />
               </div>
