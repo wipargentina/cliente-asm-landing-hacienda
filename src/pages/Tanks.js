@@ -24,7 +24,7 @@ function Tanks(props) {
                   <a
                     id='btn-hacienda'
                     href='https://wa.me/543516509975'
-                    className='btn btn-outline-success mb-4'
+                    className='btn btn-success mb-4'
                     rel='noopener noreferrer'
                     target='_blank'
                   >
@@ -37,24 +37,11 @@ function Tanks(props) {
                   <a
                     id='btn-invernada'
                     href='https://wa.me/3583647964'
-                    className='btn btn-outline-success mb-4'
+                    className='btn btn-success mb-4'
                     rel='noopener noreferrer'
                     target='_blank'
                   >
                     <img src={faWhatsapp} alt='' /> +54 358 3647 964
-                  </a>
-                </div>
-                <div className='col-md-3'>
-                  <h5>Reproductores</h5>
-                  <h6>Leonardo Pérez</h6>
-                  <a
-                    id='btn-reproductores'
-                    href='https://wa.me/543583640202'
-                    className='btn btn-outline-success mb-4'
-                    rel='noopener noreferrer'
-                    target='_blank'
-                  >
-                    <img src={faWhatsapp} alt='' /> +54 358 3640 202
                   </a>
                 </div>
               </div>
